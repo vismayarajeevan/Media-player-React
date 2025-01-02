@@ -52,12 +52,12 @@ const Home = () => {
         <div className="col-lg-6">
           <h3>All Videos</h3>
           {/* view videos */}
-          <View setDeleteResponseFromCtegory={setDeleteResponseFromCtegory} deleteResponseFromCtegory={deleteResponseFromCtegory} addReaposeFromHome={addReaposeFromHome}/>
+          <View setDeleteResponseFromView={setDeleteResponseFromView}  deleteResponseFromCtegory={deleteResponseFromCtegory} addReaposeFromHome={addReaposeFromHome}/>
         </div>
 
         {/* categories */}
         <div className="col-lg-6">
-          <Category deleteResponseFromView={deleteResponseFromView} setDeleteResponseFromCtegory={setDeleteResponseFromCtegory}/>
+          <Category  deleteResponseFromView={deleteResponseFromView} setDeleteResponseFromCtegory={setDeleteResponseFromCtegory}/>
         </div>
       </div>
       

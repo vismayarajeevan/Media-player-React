@@ -23,7 +23,7 @@ import { saveVideoApi } from '../services/allAPI'
 
 
 
-const View = ({addReaposeFromHome,deleteResponseFromCtegory,setDeleteResponseFromCtegory}) => {
+const View = ({addReaposeFromHome,deleteResponseFromCtegory,setDeleteResponseFromView}) => {
 
   // 9.statelifting for delete video from card
   const [deleteVideoResponseFromVideocard, setDeleteVideoResponseFromVideoCard]=useState("")
@@ -71,7 +71,7 @@ console.log(allVideos);
 
   const categoryVideoDragOverView =async (e)=>{
          console.log("inside categoryVideoDragOverView");
-         const {video,categorydetails}=JSON.parse(e.dataTransfer.getData("dragData "))
+         const {video,categorydetails}=JSON.parse(e.dataTransfer.getData("dragData"))
          console.log(video,categorydetails);
 
         //  a.updating the category by delete video from category
@@ -83,7 +83,7 @@ console.log(allVideos);
           const result = await updateCategoryAPI(updateCategory)
 
         //  b.use state lifting to communicate data transfer from view component to category component. state create in home
-        setDeleteResponseFromCtegory(result)
+        setDeleteResponseFromView(result)
         //  c.use api to upload video 
         await saveVideoApi(video)
       

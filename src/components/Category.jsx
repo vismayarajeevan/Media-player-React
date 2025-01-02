@@ -91,6 +91,8 @@ const Category = ({setDeleteResponseFromCtegory,deleteResponseFromView}) => {
   const dragOverCategory=(e)=>{
     e.preventDefault()
   }
+
+  
   const videoCardDropOverCategory= async(e,categorydetails)=>{
       console.log("Inside videocardDropOverCategory");
      console.log(categorydetails);
